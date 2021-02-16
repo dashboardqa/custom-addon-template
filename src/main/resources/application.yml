@@ -1,0 +1,20 @@
+server:
+  port: ${RALLY_API_PORT:8074} #YOU_CAN_CHANGE
+  servlet:
+    context-path: /api #YOU_CAN_CHANGE
+
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+
+auth:
+  token: EXAMPLE_TOKEN #YOU_CAN_CHANGE When you create new datasource on QA Dashboard, you must enter this token to API Token field if you want use authentication. This field is optional.
