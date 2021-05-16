@@ -1,6 +1,6 @@
-# QA Dashboard Custom Addon Document
+# Oobeya Custom Addon Document
 
-You can develop custom addon integration to show your own widgets on the [QA Dashboard](https://dashboard.qa/).
+You can develop custom addon integration to show your own widgets on the [Oobeya](https://oobeya.io/).
 
 #### The implementation of the following endpoints is required:
 
@@ -14,7 +14,7 @@ Expected responses and other details of the endpoints are mentioned in the docum
 
 ## Integration Steps
 
-#### 1. Click the custom addon button on the top right of the QA Dashboard Marketplace page.
+#### 1. Click the custom addon button on the top right of the Oobeya Marketplace page.
 
 <p align="center"><img src="images/addon-add.png" width="15%" height="15%"></p>
 
@@ -34,13 +34,13 @@ retrieved from this default data source. These endpoints (scopes and widget fiel
 
 After adding the data source information, you can ping your application via test connection button. 
 This way you can check that your application is accessible or not. If your project has authentication, 
-you need to fill in the API Token field. QA Dashboard will access your APIs with this api token. 
+you need to fill in the API Token field. Oobeya will access your APIs with this api token. 
 The token will be send in 'Authorization' header as BASE64-encoded.
 
 <p align="center"><img src="images/datasource-add.png" width="30%" height="30%"></p>
 
 To use the 'test connection' feature, you must implement an endpoint according to the information below. 
-The QA Dashboard  will access your application through this endpoint and wait for you to return **'UP'** as below.
+Oobeya will access your application through this endpoint and wait for you to return **'UP'** as below.
 
 * GET '{YOUR_SERVER_URL}/api/ping'
 ```json
@@ -299,4 +299,4 @@ Note: If you select "Metric with Quey" scope, you can type "(Project.Name contai
 
 ## Requesting Support
 
-Contact us for requesting support --> [QA Dashboard](https://dashboard.qa/contact/)
+Contact us for requesting support --> [Oobeya](https://oobeya.io/contact/)
